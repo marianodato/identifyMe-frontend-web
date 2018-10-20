@@ -5,7 +5,6 @@ import org.codehaus.groovy.grails.web.errors.GrailsWrappedRuntimeException
 class ErrorController {
 
     def sessionService
-    def notificationService
 
     def handleError() {
 
@@ -13,7 +12,7 @@ class ErrorController {
 
             def exception = request.exception
 
-            def user = sessionService.getUser(session.token)
+            def user = sessionService.getUser(session.token, session.userId)
             def model = [:]
 
             if (!user) {
@@ -22,7 +21,7 @@ class ErrorController {
                 log.info("User_id: " + user.id)
                 model.logged = true
                 model.username = user.username
-                model.pending = notificationService.needToNotify(user)
+                model.pending = null
             }
 
             if (exception instanceof GrailsWrappedRuntimeException) {
@@ -48,7 +47,7 @@ class ErrorController {
 
     def notFound() {
 
-        def user = sessionService.getUser(session.token)
+        def user = sessionService.getUser(session.token, session.userId)
         def model = [:]
 
         if (!user) {
@@ -57,7 +56,7 @@ class ErrorController {
             log.info("User_id: " + user.id)
             model.logged = true
             model.username = user.username
-            model.pending = notificationService.needToNotify(user)
+            model.pending = null
         }
 
         log.error("404")

@@ -2,6 +2,21 @@ class UrlMappings {
 
 	static mappings = {
 
+        "/"{
+            controller = "home"
+            action = [GET: "index"]
+        }
+
+        "/login"{
+            controller = "login"
+            action = [GET:"index", POST: "login"]
+        }
+
+        "/logout"{
+            controller = "login"
+            action = [POST: "logout"]
+        }
+
         "/ping" {
             controller = "ping"
             action = [GET: "index"]

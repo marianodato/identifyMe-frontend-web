@@ -114,5 +114,6 @@ log4j = {
     error stdout: "org.hibernate"
     error stdout: "net.sf.ehcache.hibernate"
 
+    info stdout: "webserver", additivity: false
     info stdout: "grails.app", additivity: false
 }
