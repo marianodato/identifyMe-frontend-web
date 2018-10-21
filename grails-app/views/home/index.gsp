@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FindLostPet | Cargar</title>
+    <title>identyfyMe | Inicio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="My Pets Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -25,7 +25,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 }
 
 .submitLink:hover {
-    color: #4597a8;
+    color: #252E39;
     text-decoration: none;
 }
 
@@ -45,9 +45,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <!-- header-section-starts -->
 <div class="header">
-    <div class="header-top">
+    <div class="header-top" style="background-color: #182128;">
         <div class="container">
-            <p class="location">Universidad de Belgrano</p>
+            <p class="location">Sistema de visualización de fichadas</p>
 
             <p class="phonenum">
                 <img src="${resource(dir: 'images', file: 'user.png')}" alt=""/> ${username}
@@ -61,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
             <div class="logo">
                 <a href="${createLink(controller: 'search', action: 'index')}"><img
-                        src="${resource(dir: 'images', file: 'logo2.png')}" alt=""/></a>
+                        src="${resource(dir: 'images', file: 'logo4.png')}" alt=""/></a>
             </div>
             <span class="menu"></span>
 
@@ -69,7 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul>
                     <nav class="cl-effect-5">
                         <li><a href="${createLink(controller: 'search', action: 'index')}">Buscar</a></li>
-                        <li><a class="active" href="${createLink(controller: 'post', action: 'index')}">Cargar</a></li>
+                        <li><a class="active" href="${createLink(controller: 'home', action: 'index')}">Inicio</a></li>
                         <li><a href="${createLink(controller: 'pet', action: 'index')}">Mis mascotas</a></li>
                         <li><a <g:if test="${pending}">style="color: #FF0000"</g:if>
                                href="${createLink(controller: 'activity', action: 'index')}">Actividad <g:if
@@ -260,9 +260,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- content-section-ends -->
 <!-- footer-section-starts -->
 <div class="header">
-    <div class="header-top" style="background-color: #474747;">
+    <div class="header-top" style="background-color: #182128;"">
         <div class="container">
-            <p class="location">Copyright © 2017 FindLostPet</p>
+            <p class="location">Copyright © 2018 identifyMe</p>
         </div>
     </div>
 </div>

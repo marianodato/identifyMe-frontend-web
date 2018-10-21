@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FindLostPet | Entrar</title>
+    <title>identifyMe | Entrar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="My Pets Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -17,7 +17,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <style>
 body {
     /*font-family: 'Open Sans', sans-serif;*/
-    background: #4597a8;
+    background: #252E39;
     margin: 0 auto 0 auto;
     width: 100%;
     text-align: center;
@@ -46,7 +46,7 @@ h1 {
     border-radius: 6px;
     margin: 0 auto 0 auto;
     padding: 0px 0px 70px 0px;
-    border: #0087a8 4px solid;
+    border: #001A39 4px solid;
 }
 
 .username {
@@ -70,44 +70,24 @@ h1 {
     font-size: 1em;
 }
 
-.btn3 {
-    float: left;
-    background: #27ae60;
-    width: 125px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    color: white;
-    border-radius: 4px;
-    border: #00cc18 1px solid;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    font-weight: 800;
-    font-size: 0.8em;
-}
-
-.btn3:hover {
-    background: #2ecc71;
-}
-
 .btn2 {
     float: left;
-    background: #3498db;
+    background: #009688;
     width: 125px;
     padding-top: 5px;
     padding-bottom: 5px;
     color: white;
     border-radius: 4px;
-    border: #2980b9 1px solid;
+    border: #00877a 1px solid;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 10px;
+    margin-left: 84px;
     font-weight: 800;
     font-size: 0.8em;
 }
 
 .btn2:hover {
-    background: #37bfd2;
+    background: #4cb5ab;
 }
 
 .login_div {
@@ -132,9 +112,9 @@ h1 {
 <body>
 <!-- header-section-starts -->
 <div class="header">
-    <div class="header-top">
+    <div class="header-top" style="background-color: #182128">
         <div class="container">
-            <p class="location">Universidad de Belgrano</p>
+            <p class="location">Sistema de visualización de fichadas</p>
 
             <p class="phonenum">
                 <img src="${resource(dir: 'images', file: 'user.png')}" alt=""/> No logueado
@@ -148,14 +128,13 @@ h1 {
         <div class="container">
             <div class="logo">
                 <a href="${createLink(controller: 'home', action: 'index')}"><img
-                        src="${resource(dir: 'images', file: 'logo2.png')}" alt=""/></a>
+                        src="${resource(dir: 'images', file: 'logo4.png')}" alt=""/></a>
             </div>
             <span class="menu"></span>
 
             <div class="top-menu">
                 <ul>
                     <nav class="cl-effect-5">
-                        <li><a href="${createLink(controller: 'home', action: 'index')}">Inicio</a></li>
                         <li><a class="active" href="${createLink(controller: 'login', action: 'index')}">Entrar</a></li>
                     </nav>
                 </ul>
@@ -182,7 +161,6 @@ h1 {
                                onFocus="field_focus(this, 'Contraseña');" onblur="field_blur(this, 'Password');"
                                class="username" required="required"/>
                         <g:submitButton disabled="false" class="btn2" id="sign_in" name="sign_in" value="Entrar"/>
-                        <g:submitButton disabled="false" class="btn3" id="sign_up" name="sign_up" value="Registrarme"/>
                     </div>
                 </form>
             </div>
@@ -192,9 +170,9 @@ h1 {
 
 <!-- footer-section-starts -->
 <div class="header" style="padding-top: 249px">
-    <div class="header-top" style="background-color: #474747;">
+    <div class="header-top" style="background-color: #182128;">
         <div class="container">
-            <p class="location">Copyright © 2017 FindLostPet</p>
+            <p class="location">Copyright © 2018 identifyMe</p>
         </div>
     </div>
 </div>
