@@ -1241,6 +1241,18 @@ a.hvr-bounce-to-left:hover,a.hvr-bounce-to-left:focus,a.hvr-bounce-to-left:activ
   background: #444444;
   padding: 3em 0;
 }
+
+.fixed-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 45px;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
 .follow-us-on h4 {
 	margin-bottom: 0.7em;
 	  color: #fff;

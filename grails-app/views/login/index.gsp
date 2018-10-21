@@ -169,13 +169,11 @@ h1 {
 </div>
 
 <!-- footer-section-starts -->
-<div class="header" style="padding-top: 249px">
-    <div class="header-top" style="background-color: #182128;">
+<div class="fixed-footer" style="background-color: #182128;">
         <div class="container">
-            <p class="location">Copyright © 2018 identifyMe</p>
+            <p class="location" style="padding-top: 15px">Copyright © 2018 identifyMe</p>
         </div>
     </div>
-</div>
 <!-- footer-section-ends -->
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -108,15 +108,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 
     <!-- content-section-ends -->
+
     <!-- footer-section-starts -->
-    <div class="header" style="padding-top: 103px">
-        <div class="header-top" style="background-color: #182128;">
+    <div class="fixed-footer" style="background-color: #182128;">
             <div class="container">
-                <p class="location">Copyright © 2018 identifyMe</p>
+                <p class="location" style="padding-top: 15px">Copyright © 2018 identifyMe</p>
             </div>
         </div>
-    </div>
     <!-- footer-section-ends -->
+
     <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 </g:else>
 
