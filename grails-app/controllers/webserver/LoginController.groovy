@@ -6,6 +6,9 @@ class LoginController {
     def sessionService
 
     def index() {
+
+        log.info("Starting index - LoginController")
+
         def user = sessionService.getUser(session.token, session.userId)
 
         if (user) {
@@ -15,12 +18,13 @@ class LoginController {
         }
 
         render(view: "/login/index")
-        return
     }
 
     def login() {
+
+        log.info("Starting login - LoginController")
+
         def user = sessionService.getUser(session.token, session.userId)
-        def resp = [:]
 
         if (user) {
             log.info("User_id: " + user.id)
@@ -30,12 +34,7 @@ class LoginController {
 
         log.info("Params: " + params)
 
-        if (params.sign_up) {
-            redirect(controller: "registration", action: "index")
-            return
-        }
-
-        resp = loginService.doLogin(params.username, params.password)
+        def resp = loginService.doLogin(params.username, params.password)
 
         if (resp.status == 201) {
             //Default session time: 30 minutes
@@ -46,12 +45,13 @@ class LoginController {
         }
 
         render(view: "/login/index", model: [message: resp.message])
-        return
     }
 
     def logout() {
+
+        log.info("Starting logout - LoginController")
+
         session.invalidate()
         redirect(controller: "login", action: "index")
-        return
     }
 }

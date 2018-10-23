@@ -40,6 +40,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     font-size: 1.0em;
     color: #ff0000;
 }
+
+#table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#table td, #table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#table tr:hover {
+    background-color: #ddd;
+}
+
+#table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #009688;
+    color: white;
+}
 </style>
 
 <body>
@@ -60,7 +87,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="header-bottom">
         <div class="container">
             <div class="logo">
-                <a href="${createLink(controller: 'search', action: 'index')}"><img
+                <a href="${createLink(controller: 'home', action: 'index')}"><img
                         src="${resource(dir: 'images', file: 'logo4.png')}" alt=""/></a>
             </div>
             <span class="menu"></span>
@@ -68,12 +95,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="top-menu">
                 <ul>
                     <nav class="cl-effect-5">
-                        <li><a href="${createLink(controller: 'search', action: 'index')}">Buscar</a></li>
-                        <li><a class="active" href="${createLink(controller: 'home', action: 'index')}">Inicio</a></li>
-                        <li><a href="${createLink(controller: 'pet', action: 'index')}">Mis mascotas</a></li>
-                        <li><a <g:if test="${pending}">style="color: #FF0000"</g:if>
-                               href="${createLink(controller: 'activity', action: 'index')}">Actividad <g:if
-                                    test="${pending}">(${pending})</g:if></a></li>
+                        <li><a class="active" href="${createLink(controller: 'home', action: 'index')}">Mis fichadas</a>
+                        </li>
+                        <li><a href="${createLink(controller: 'search', action: 'index')}">Mi perfil</a></li>
                         <li>
                             <a>
                                 <form method="post" controller="login" action="logout">
@@ -105,7 +129,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <g:if test="${message}">
                         <div name="message" id="message" class="message">${message}</div>
                     </g:if>
+
+                    <table id="table"><tr><th>Name</th> <th>Favorite Color</th></tr> <tr><td>Bob</td> <td>Yellow</td>
+                    </tr> <tr><td>Michelle</td> <td>Purple</td></tr></table>
+
                     <div class="left_form">
+
                         <div>
                             <span><label>ESTADO</label></span>
                             <select name="status">
@@ -260,7 +289,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- content-section-ends -->
 <!-- footer-section-starts -->
 <div class="header">
-    <div class="header-top" style="background-color: #182128;"">
+    <div class="header-top" style="background-color: #182128;">
         <div class="container">
             <p class="location">Copyright © 2018 identifyMe</p>
         </div>

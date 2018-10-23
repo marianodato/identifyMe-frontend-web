@@ -28,27 +28,33 @@ class RestClient {
     private static final String HOST = "identifyme-backend-api.herokuapp.com"
 
     def init() {
+        log.info("Starting init - RestClient")
         def socketConfig = (new SocketConfig.Builder()).setSoTimeout(soTimeout).build()
         httpClient = HttpClientBuilder.create().setDefaultSocketConfig(socketConfig).build()
     }
 
     def get(String uri) {
+        log.info("Starting get - RestClient")
         doRequest(GET, uri)
     }
 
     def post(String uri, def body) {
+        log.info("Starting post - RestClient")
         doRequest(POST, uri, body)
     }
 
     def put(String uri, def body) {
+        log.info("Starting put - RestClient")
         doRequest(PUT, uri, body)
     }
 
     def delete(String uri) {
+        log.info("Starting delete - RestClient")
         doRequest(DELETE, uri)
     }
 
     def doRequest(def method, String uri, def body = null) {
+        log.info("Starting doRequest - RestClient")
         def data, statusCode
         try {
             def request

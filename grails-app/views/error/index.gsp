@@ -52,11 +52,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="container">
                 <div class="logo">
                     <g:if test="${logged == true}">
-                        <a href="${createLink(controller: 'search', action: 'index')}"><img
+                        <a href="${createLink(controller: 'home', action: 'index')}"><img
                                 src="${resource(dir: 'images', file: 'logo4.png')}" alt=""/></a>
                     </g:if>
                     <g:else>
-                        <a href="${createLink(controller: 'home', action: 'index')}"><img
+                        <a href="${createLink(controller: 'login', action: 'index')}"><img
                                 src="${resource(dir: 'images', file: 'logo4.png')}" alt=""/></a>
                     </g:else>
                 </div>
@@ -65,10 +65,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul>
                         <nav class="cl-effect-5">
                             <g:if test="${logged == true}">
-                                <li><a href="${createLink(controller: 'search', action: 'index')}">Buscar</a></li>
-                                <li><a href="${createLink(controller: 'home', action: 'index')}">Inicio</a></li>
-                                <li><a href="${createLink(controller: 'pet', action: 'index')}">Mis mascotas</a></li>
-                                <li><a <g:if test="${pending}">style="color: #FF0000"</g:if> href="${createLink(controller: 'activity', action: 'index')}">Actividad <g:if test="${pending}">(${pending})</g:if></a></li>
+                                <li><a href="${createLink(controller: 'home', action: 'index')}">Mis fichadas</a></li>
+                                <li><a href="${createLink(controller: 'search', action: 'index')}">Mi perfil</a></li>
                                 <li>
                                     <a>
                                         <form method="post" controller="login" action="logout">
@@ -97,10 +95,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <h1>Ups...</h1>
                     <h2>Disculpa, ocurrió un error en el servidor!</h2>
                     <g:if test="${logged == true}">
-                        <a class="hvr-bounce-to-left button" href="${createLink(controller: 'search', action: 'index')}">Volver</a>
+                        <a class="hvr-bounce-to-left button"
+                           href="${createLink(controller: 'home', action: 'index')}">Volver</a>
                     </g:if>
                     <g:else>
-                        <a class="hvr-bounce-to-left button" href="${createLink(controller: 'home', action: 'index')}">Volver</a>
+                        <a class="hvr-bounce-to-left button"
+                           href="${createLink(controller: 'login', action: 'index')}">Volver</a>
                     </g:else>
                 </div>
             </div>
@@ -116,15 +116,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </div>
     <!-- footer-section-ends -->
-
-    <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 </g:else>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="${resource(dir:'js', file:'jquery.min.js')}"></script>
 <script src="${resource(dir:'js', file:'responsiveslides.min.js')}"></script>
-<script type="text/javascript" src="${resource(dir:'js', file:'move-top.js')}"></script>
-<script type="text/javascript" src="${resource(dir:'js', file:'easing.js')}"></script>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script>
     $(function () {
@@ -142,14 +138,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         $( ".top-menu" ).slideToggle( "slow", function() {
             // Animation complete.
         });
-    });
-</script>
-<!-- script for menu -->
-<script type="text/javascript">
-    $(document).ready(function() {
-
-        $().UItoTop({ easingType: 'easeOutQuart' });
-
     });
 </script>
 </body>

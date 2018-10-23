@@ -7,6 +7,8 @@ class SessionService {
 
     def getUser(def sessionToken, def userId) {
 
+        log.info("Starting getUser - SessionService")
+
         log.info("Session_token: " + sessionToken)
         log.info("User_id: " + userId)
 

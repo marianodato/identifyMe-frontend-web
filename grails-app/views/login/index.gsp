@@ -127,7 +127,7 @@ h1 {
     <div class="header-bottom">
         <div class="container">
             <div class="logo">
-                <a href="${createLink(controller: 'home', action: 'index')}"><img
+                <a href="${createLink(controller: 'login', action: 'index')}"><img
                         src="${resource(dir: 'images', file: 'logo4.png')}" alt=""/></a>
             </div>
             <span class="menu"></span>
@@ -179,8 +179,6 @@ h1 {
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="${resource(dir: 'js', file: 'jquery.min.js')}"></script>
 <script src="${resource(dir: 'js', file: 'responsiveslides.min.js')}"></script>
-<script type="text/javascript" src="${resource(dir: 'js', file: 'move-top.js')}"></script>
-<script type="text/javascript" src="${resource(dir: 'js', file: 'easing.js')}"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
 <script type="application/x-javascript"> addEventListener("load", function () {
     setTimeout(hideURLbar, 0);

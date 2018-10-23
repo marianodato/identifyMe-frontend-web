@@ -7,6 +7,8 @@ class LoginService {
 
     def doLogin(String username, String password) {
 
+        log.info("Starting doLogin - LoginService")
+
         def resp = [:]
         def body = [:]
         body.username = username

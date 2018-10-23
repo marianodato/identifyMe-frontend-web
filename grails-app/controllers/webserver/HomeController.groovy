@@ -6,6 +6,8 @@ class HomeController {
 
     def index() {
 
+        log.info("Starting index - HomeController")
+
         def user = sessionService.getUser(session.token, session.userId)
         def model = [:]
 
@@ -15,13 +17,7 @@ class HomeController {
         }
 
         model.username = user.username
-        model.petColors = null
-        model.petSizes = null
-        model.petTypes = null
-        model.petRaces = null
-        model.pending = null
 
         render(view: "/home/index", model: model)
-        return
     }
 }

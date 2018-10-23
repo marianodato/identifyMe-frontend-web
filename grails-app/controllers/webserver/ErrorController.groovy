@@ -10,9 +10,10 @@ class ErrorController {
 
         try{
 
-            def exception = request.exception
+            log.info("Starting handleError - ErrorController")
 
             def user = sessionService.getUser(session.token, session.userId)
+            def exception = request.exception
             def model = [:]
 
             if (!user) {
@@ -21,7 +22,6 @@ class ErrorController {
                 log.info("User_id: " + user.id)
                 model.logged = true
                 model.username = user.username
-                model.pending = null
             }
 
             if (exception instanceof GrailsWrappedRuntimeException) {
@@ -42,10 +42,11 @@ class ErrorController {
             response.status = 500
             render (view:"/error/index")
         }
-        return
     }
 
     def notFound() {
+
+        log.info("Starting notFound - ErrorController")
 
         def user = sessionService.getUser(session.token, session.userId)
         def model = [:]
@@ -56,12 +57,10 @@ class ErrorController {
             log.info("User_id: " + user.id)
             model.logged = true
             model.username = user.username
-            model.pending = null
         }
 
         log.error("404")
         response.status = 404
         render (view:"/error/not_found", model:model)
-        return
     }
 }

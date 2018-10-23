@@ -84,10 +84,10 @@ p.phonenum {
 	margin: 0;
 }
 .top-menu ul li a.active{
-    color: #252E39;
+	color: #009688;
 }
 .top-menu ul li a:hover{
-    color: #252E39;
+	color: #4cb5ab;
 }
 nav a {
 	position: relative;
@@ -140,7 +140,7 @@ nav a:focus {
 
 .top-menu ul li a{
 	text-decoration:none;
-	color:#444444;
+	color: #252E39;
 	font-size: 14px;
 	font-weight: 400;
 	text-transform:uppercase;
@@ -1205,7 +1205,7 @@ a.hvr-bounce-to-left {
   transition-property: color;
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
-    background: #252E39;
+	background: #009688;
   color: #fff;
 }
 a.hvr-bounce-to-left:before {
@@ -1216,7 +1216,7 @@ a.hvr-bounce-to-left:before {
   left: 0;
   right: 0;
   bottom: 0;
-    background: #284251;
+	background: #4cb5ab;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 100% 50%;
