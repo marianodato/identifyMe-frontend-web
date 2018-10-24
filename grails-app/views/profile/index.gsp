@@ -87,7 +87,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="section group example">
                                 <div class="left_form">
                                     <div class="blog_heading">
-                                        <p><span>Datos personales</span></p>
+                                        <p><span style="color:#009688">Datos personales</span></p>
 
                                         <p class="post"><b>Nombre:</b> ${name}<br/>
                                             <b>Dni:</b> ${dni}<br/>
@@ -98,7 +98,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         </p>
                                         <br/>
 
-                                        <p><span>Datos de la huella</span></p>
+                                        <p><span style="color:#009688">Datos de la huella</span></p>
 
                                         <p class="post"><b>Id:</b> <g:if
                                                 test="${fingerprintId != null}">${fingerprintId}</g:if><g:else>-</g:else><br/>
@@ -111,7 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                 <div class="right_form">
                                     <div class="blog_heading">
-                                        <p><span>Datos del sistema</span></p>
+                                        <p><span style="color:#009688">Datos del sistema</span></p>
 
                                         <p class="post">
                                             <b>Id:</b> ${id}<br/>
