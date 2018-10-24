@@ -17,6 +17,11 @@ class UrlMappings {
             action = [POST: "logout"]
         }
 
+        "/profile"{
+            controller = "profile"
+            action = [GET:"index"]
+        }
+
         "/ping" {
             controller = "ping"
             action = [GET: "index"]

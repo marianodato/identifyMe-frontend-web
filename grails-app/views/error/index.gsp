@@ -66,7 +66,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <nav class="cl-effect-5">
                             <g:if test="${logged == true}">
                                 <li><a href="${createLink(controller: 'home', action: 'index')}">Mis fichadas</a></li>
-                                <li><a href="${createLink(controller: 'search', action: 'index')}">Mi perfil</a></li>
+                                <li><a href="${createLink(controller: 'profile', action: 'index')}">Mi perfil</a></li>
                                 <li>
                                     <a>
                                         <form method="post" controller="login" action="logout">
