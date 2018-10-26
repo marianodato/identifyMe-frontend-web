@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>identyfyMe | Inicio</title>
+    <title>identyfyMe | Mis fichadas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="My Pets Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -29,18 +29,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     text-decoration: none;
 }
 
-/* Always set the map height explicitly to define the size of the div
-   * element that contains the map. */
-#map {
-    width: 100%;
-    height: 350px;
-}
-
-.message {
-    font-size: 1.0em;
-    color: #ff0000;
-}
-
 #table {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -50,6 +38,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 #table td, #table th {
     border: 1px solid #ddd;
     padding: 8px;
+    width: 33%;
 }
 
 #table tr:nth-child(even) {
@@ -63,12 +52,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 #table th {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
+    text-align: center;
     background-color: #009688;
     color: white;
 }
 </style>
-
 <body>
 <!-- header-section-starts -->
 <div class="header">
@@ -108,200 +96,105 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </nav>
                 </ul>
             </div>
-
             <div class="clearfix"></div>
         </div>
     </div>
 </div>
 <!-- header-section-ends -->
 <!-- content-section-starts -->
-<div class="content">
-    <div class="main">
+<g:if test="${registrationRecords.size() == 0}">
+    <div class="content">
         <div class="container">
-            <div class="contact-form">
-                <h2>Cargar</h2>
+            <div class="error">
+                <div class="error-head">
+                    <h1>Ups...</h1>
 
-                <form method="post" action="post" enctype="multipart/form-data">
-                    <noscript>
-                        <div name="message" id="no_js_message"
-                             class="message">Por favor habilite javascript y recargue la página</div>
-                    </noscript>
-                    <g:if test="${message}">
-                        <div name="message" id="message" class="message">${message}</div>
-                    </g:if>
-
-                    <table id="table"><tr><th>Name</th> <th>Favorite Color</th></tr> <tr><td>Bob</td> <td>Yellow</td>
-                    </tr> <tr><td>Michelle</td> <td>Purple</td></tr></table>
-
-                    <div class="left_form">
-
-                        <div>
-                            <span><label>ESTADO</label></span>
-                            <select name="status">
-                                <option value="lost">Perdido</option>
-                                <option value="found">Encontrado</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <span><label>APODO</label></span>
-                            <span><input type="text" name="nickname" class="nickname" required="required"/></span>
-                        </div>
-
-                        <div>
-                            <span><label>DESCRIPCIÓN</label></span>
-                            <span><textarea name="description" class="description" required="required"></textarea>
-                            </span>
-                        </div>
-
-                        <div>
-                            <div style="text-align:left">
-                                <span><label>GÉNERO</label></span>
-                                <input type="radio" name="gender" value="male" checked> Masculino<br>
-                                <input type="radio" name="gender" value="female"> Femenino<br>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <span><label>IMÁGEN</label></span>
-                                <input type="file" name="image" accept="image/*">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="right_form">
-                        <div>
-                            <span><label>COLOR</label></span>
-                            <select id="selectPetColors" name="selectPetColors">
-                                <g:each in="${petColors}">
-                                    <option value="${it.id}">${it.description}</option>
-                                </g:each>
-                                <option value="Other">Otro</option>
-                            </select>
-
-                            <div>
-                                <span><input id="inputPetColorsOther" type="hidden" name="otherColor" class="other"
-                                             required="required"/></span>
-                            </div>
-                        </div>
-
-                        <div>
-                            <span><label>TAMAÑO</label></span>
-                            <select id="selectPetSizes" name="selectPetSizes">
-                                <g:each in="${petSizes}">
-                                    <option value="${it.id}">${it.description}</option>
-                                </g:each>
-                                <option value="Other">Otro</option>
-                            </select>
-
-                            <div>
-                                <span><input id="inputPetSizesOther" type="hidden" name="otherSize" class="other"
-                                             required="required"/></span>
-                            </div>
-                        </div>
-
-                        <div>
-                            <span><label>Tipo</label></span>
-                            <select id="selectPetTypes" name="selectPetTypes">
-                                <g:each in="${petTypes}">
-                                    <option data-id="${it.id}" value="${it.id}">${it.description}</option>
-                                </g:each>
-                                <option value="Other">Otro</option>
-                            </select>
-
-                            <div>
-                                <span><input id="inputPetTypesOther" type="hidden" name="otherType" class="other"
-                                             required="required"/></span>
-                            </div>
-                        </div>
-
-                        <div>
-                            <span><label>RAZA</label></span>
-                            <select id="selectPetRaces" name="selectPetRaces">
-                                <g:each in="${petRaces}">
-                                    <option name="optionsPetRaces" data-id="${it.petType.id}"
-                                            value="${it.id}">${it.description}</option>
-                                </g:each>
-                                <option id="optionPetRacesOther" value="Other">Otro</option>
-                            </select>
-
-                            <div>
-                                <span><input id="inputPetRacesOther" type="hidden" name="otherRace" class="other"
-                                             required="required"/></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="clearfix"></div>
-
-                    <div class="content_bottom">
-                        <span><label>UBICACIÓN</label></span>
-
-                        <div>
-                            <span><input id="latitude" type="hidden" name="latitude" class="latitude"/></span>
-                        </div>
-
-                        <div id="map" class="map"></div>
-                        <script type="text/javascript">
-                            function initMap() {
-                                var map = new google.maps.Map(document.getElementById('map'), {
-                                    center: {lat: -34.603722, lng: -58.381592},
-                                    zoom: 11
-                                });
-
-                                // Try HTML5 geolocation.
-                                if (navigator.geolocation) {
-                                    navigator.geolocation.getCurrentPosition(function (position) {
-                                        var pos = {
-                                            lat: position.coords.latitude,
-                                            lng: position.coords.longitude
-                                        };
-                                        map.setCenter(pos);
-                                    });
-                                }
-
-                                map.addListener('click', function (event) {
-                                    addMarker(map, event.latLng);
-                                });
-                            }
-                        </script>
-                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg1CQ0HmU3luoSsa5cqSsNlFSyXwCcvJE&callback=initMap"
-                                async defer></script>
-
-                        <div>
-                            <span><input id="longitude" type="hidden" name="longitude" class="longitude"/></span>
-                        </div>
-
-                        <div class="clearfix"></div>
-
-                        <div>
-                            <span><input type="submit" value="Cargar" class="myButton"></span>
-                        </div>
-                    </div>
-                </form>
+                    <h2>No tienes ninguna fichada en el sistema!</h2>
+                    <a class="hvr-bounce-to-left button"
+                       href="${createLink(controller: 'profile', action: 'index')}">Ir a mi perfil</a>
+                </div>
             </div>
         </div>
     </div>
 
-</div>
-</div>
-<!-- content-section-ends -->
-<!-- footer-section-starts -->
-<div class="header">
-    <div class="header-top" style="background-color: #182128;">
-        <div class="container">
-            <p class="location">Copyright © 2018 identifyMe</p>
+</g:if>
+<g:else>
+    <div class="content">
+        <div class="main">
+            <div class="container">
+                <div class="blog-content-head text-left">
+                    <h3>Mis fichadas</h3>
+                    <br/>
+                    <br/>
+                </div>
+
+                <div class="section group">
+                    <div class="cont span_2_of_3">
+                        <div class="blog_posts">
+                            <div class="section group example">
+
+                                <table id="table"><tr><th>Entradas</th> <th>Salidas</th> <th>Segundos en sistema</th>
+                                </tr>
+                                    <g:each in="${registrationRecords}">
+                                        <tr><td>${it.entryTime}</td> <td>${it.departureTime ? it.departureTime : "No hay registro"}</td> <td>${it.secondsInSystem ? it.secondsInSystem : "No hay registro"}</td>
+                                        </tr>
+                                    </g:each>
+                                </table>
+
+                                <br/>
+                                <br/>
+
+                                <div class="content-pagenation">
+                                    <g:if test="${page != 1 && page != 2}">
+                                        <li><a href="${createLink(controller: 'home', action: 'index')}?page=1">Primero</a>
+                                        </li>
+                                        <li><span>. . . . .</span></li>
+                                    </g:if>
+                                    <g:each var="i" in="${(1..<(pages + 1))}">
+                                        <g:if test="${i == (page - 1) || i == page || i == (page + 1)}">
+                                            <li><a id="page-${i}"
+                                                   href="${createLink(controller: 'home', action: 'index')}?page=${i}">${i}</a>
+                                            </li>
+                                        </g:if>
+                                </g:each>
+                                    <g:if test="${page != pages && page != (pages - 1)}">
+                                        <li><span>. . . . .</span></li>
+                                        <li><a href="${createLink(controller: 'home', action: 'index')}?page=${pages}">Último</a>
+                                        </li>
+                                    </g:if>
+                                    <div class="clearfix"></div>
+                                </div>
+                        </div>
+                        </div>
+                    </div>
+            </div>
         </div>
     </div>
 </div>
-<!-- footer-section-ends -->
+</g:else>
+
+<g:if test="${registrationRecords.size() <= 4}">
+    <!-- footer-section-starts -->
+    <div class="fixed-footer" style="background-color: #182128;">
+        <div class="container">
+            <p class="location" style="padding-top: 15px">Copyright © 2018 identifyMe</p>
+        </div>
+    </div>
+    <!-- footer-section-ends -->
+</g:if>
+<g:else>
+    <div class="header">
+        <div class="header-top" style="background-color: #182128;">
+            <div class="container">
+                <p class="location">Copyright © 2018 identifyMe</p>
+            </div>
+        </div>
+    </div>
+</g:else>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="${resource(dir: 'js', file: 'jquery.min.js')}"></script>
 <script src="${resource(dir: 'js', file: 'responsiveslides.min.js')}"></script>
-<script type="text/javascript" src="${resource(dir: 'js', file: 'move-top.js')}"></script>
-<script type="text/javascript" src="${resource(dir: 'js', file: 'easing.js')}"></script>
 <script type="application/x-javascript"> addEventListener("load", function () {
     setTimeout(hideURLbar, 0);
 }, false);
@@ -327,124 +220,13 @@ function hideURLbar() {
         });
     });
 </script>
-<!-- script for menu -->
 <script type="text/javascript">
-
-    var selectPetColors = document.getElementById("selectPetColors");
-    var inputPetColorsOther = document.getElementById("inputPetColorsOther");
-    var selectPetSizes = document.getElementById("selectPetSizes");
-    var inputPetSizesOther = document.getElementById("inputPetSizesOther");
-    var selectPetTypes = document.getElementById("selectPetTypes");
-    var inputPetTypesOther = document.getElementById("inputPetTypesOther");
-    var selectPetRaces = document.getElementById("selectPetRaces");
-    var inputPetRacesOther = document.getElementById("inputPetRacesOther");
-    var optionsPetRaces = document.getElementsByName("optionsPetRaces");
-    var latitude = document.getElementById("latitude");
-    var longitude = document.getElementById("longitude");
-    var marker;
-
     $(document).ready(function () {
 
-        petColorsLogic();
-
-        petSizesLogic();
-
-        petTypesLogic();
-
-        $().UItoTop({easingType: 'easeOutQuart'});
+        var selectedPage = document.getElementById("page-" +${page});
+        selectedPage.style = "background:#009688;color:#FFF;text-decoration:underline;";
 
     });
-
-    function petColorsLogic() {
-        var optionPetColorsSelectedText = selectPetColors.options[selectPetColors.selectedIndex].text;
-        if (optionPetColorsSelectedText == "Otro")
-            inputPetColorsOther.type = 'text';
-        else
-            inputPetColorsOther.type = 'hidden';
-    }
-
-    function petSizesLogic() {
-        var optionPetSizesSelectedText = selectPetSizes.options[selectPetSizes.selectedIndex].text;
-        if (optionPetSizesSelectedText == "Otro")
-            inputPetSizesOther.type = 'text';
-        else
-            inputPetSizesOther.type = 'hidden';
-    }
-
-    function petTypesLogic() {
-        var optionPetTypesSelectedText = selectPetTypes.options[selectPetTypes.selectedIndex].text;
-        var i = 0;
-        var petTypeId;
-        var first = true;
-        inputPetRacesOther.type = 'text';
-        selectPetRaces.selectedIndex = optionsPetRaces.length;
-
-        if (optionPetTypesSelectedText == "Otro") {
-
-            inputPetTypesOther.type = 'text';
-
-            for (i = 0; i < optionsPetRaces.length; i++)
-                optionsPetRaces[i].setAttribute("hidden", true);
-
-        } else {
-            inputPetTypesOther.type = 'hidden';
-
-            petTypeId = selectPetTypes.options[selectPetTypes.selectedIndex].dataset.id;
-            first = true;
-
-            for (i = 0; i < optionsPetRaces.length; i++) {
-                if (optionsPetRaces[i].dataset.id != petTypeId) {
-                    optionsPetRaces[i].setAttribute("hidden", true);
-                } else {
-                    optionsPetRaces[i].removeAttribute("hidden");
-                    if (first) {
-                        inputPetRacesOther.type = 'hidden';
-                        selectPetRaces.selectedIndex = i;
-                    }
-                    first = false;
-                }
-            }
-
-        }
-    }
-
-    function petRacesLogic() {
-        var optionPetRacesSelectedText = selectPetRaces.options[selectPetRaces.selectedIndex].text;
-        if (optionPetRacesSelectedText == "Otro")
-            inputPetRacesOther.type = 'text';
-        else
-            inputPetRacesOther.type = 'hidden';
-    }
-
-    selectPetColors.addEventListener("change", function () {
-        petColorsLogic();
-    });
-
-    selectPetSizes.addEventListener("change", function () {
-        petSizesLogic();
-    });
-
-    selectPetTypes.addEventListener("change", function () {
-        petTypesLogic()
-    });
-
-    selectPetRaces.addEventListener("change", function () {
-        petRacesLogic();
-    });
-
-    function addMarker(map, location) {
-        if (marker) {
-            marker.setPosition(location);
-        } else {
-            marker = new google.maps.Marker({
-                position: location,
-                icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
-                map: map
-            });
-        }
-        latitude.value = location.lat();
-        longitude.value = location.lng();
-    }
 </script>
 </body>
 </html>

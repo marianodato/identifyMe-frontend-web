@@ -685,11 +685,11 @@ p.post {
 	display: inline-block;
 }
 .content-pagenation li a {
-    color: #252E39;
+    color: #009688;
 	font-size: 1em;
 	background: #FFF;
 	padding: 10px 12px;
-    border: 1px solid #252E39;
+    border: 1px solid #009688;
 	-webkit-transition: all .5s;
 	-moz-transition: all .5s;
 	-o-transition: all .5s;
@@ -697,7 +697,7 @@ p.post {
 	transition: all .5s;
 }
 .content-pagenation li a:hover{
-    background: #252E39;
+    background: #009688;
 	color:#FFF;
 }
 .rsidebar.span_1_of_3 ul {
