@@ -201,7 +201,7 @@ a.more {
 	font-weight: 600;
 	padding: 0.8em 2em;
 	background:#eee;
-	color:#000;
+	color: #252E39;
 	text-decoration:none;
 }
 a.more:hover {
@@ -301,7 +301,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	}
 }
 .about-section h3 {
-	color: #000000;
+	color: #252E39;
 	text-transform: capitalize;
 	font-size: 2.8em;
 	border-bottom: 4px solid #7ebd26;
@@ -335,7 +335,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	text-transform: uppercase;
 	font-size: 2.2em;
 	font-weight: 500;
-	color: #000;
+	color: #252E39;
 	margin-bottom:0.5em;
 }
 .welcome-grid h5 {
@@ -424,7 +424,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	z-index: 1;
 }
 .footer{
-	background:#444444;
+	background: #252E39;
 	padding:5em 0;
 }
 .contact-section input[type="text"], .contact-section textarea {
@@ -570,7 +570,7 @@ i.googlepluse:hover{
 
 .btn-1c:hover,
 .btn-1c:active {
-	color:#000;
+	color: #252E39;
 }
 
 .btn-1c:hover:after,
@@ -582,7 +582,7 @@ i.googlepluse:hover{
 	overflow: hidden;
 }
 .more a {
-	color: #444444;
+	color: #252E39;
 	padding:9px 20px;
     border: 1px solid #252E39;
 }
@@ -672,7 +672,7 @@ i.googlepluse:hover{
 p.post {
 	font-style: italic;
 	margin-bottom: 1.2em;
-	color: #000;
+	color: #252E39;
 }
 .more {
 	margin-top: 2.5em;
@@ -720,7 +720,7 @@ p.post {
 }
 .span_2_of_3 p,
 .span_1_of_3  p  {
-	color: #444444;
+	color: #252E39;
 	font-size: 1.1em;
 	line-height: 1.9em;
 	font-weight: 300;
@@ -758,7 +758,7 @@ p.post {
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.13);    
 }
 .blog-content-head h3{
-	color: #000000;
+	color: #252E39;
   text-transform: uppercase;
   font-size: 2.2em;
   font-weight: 500;
@@ -770,7 +770,7 @@ p.post {
 	margin: 50px 0 0 0;
 }
 .rsidebar h3{
-	color: #444444;
+	color: #252E39;
 	font-size: 2.5em;
 	margin-bottom: 0.5em;
 	font-weight:400;
@@ -782,7 +782,7 @@ p.post {
 }
 .latest_comments p {
 	font-size: 1em;
-	color: #444;
+	color: #252E39;
 	font-weight: 500;
 	padding:5px 0;
 }
@@ -825,7 +825,7 @@ p.text {
 #commentform input[type="text"] {
 	padding: 8px 15px;
 	width: 60%;
-	color: #444;
+	color: #252E39;
 	font-size: 1em;
 	border: 1px solid #eee;
 	background: #eee;
@@ -835,7 +835,7 @@ p.text {
 #commentform textarea {
 	padding: 13px 20px;
 	width:60%;
-	color: #444;
+	color: #252E39;
 	font-size:0.85em;
 	outline: none;
 	height:150px;
@@ -893,7 +893,7 @@ p.text {
 	border: 3px solid#ccc;
 }
 .cmnts-right a:hover{
-	background: #333;
+	background: #252E39;
 	text-decoration:none;
 }
 .cmts-main-right h5 {
@@ -921,7 +921,7 @@ p.text {
 /*--contact--*/
 /************* Contact ********/
 .contact-form h2{
-   color: #000000;
+	color: #252E39;
   text-transform: uppercase;
   font-size: 2.2em;
   font-weight: 500;
@@ -929,7 +929,7 @@ p.text {
   text-align: center;
 }
 .company_address h2,.contact_info h2{
-   color: #000000;
+	color: #252E39;
   text-transform: uppercase;
   font-size: 2em;
   font-weight: 500;
@@ -997,7 +997,7 @@ p.text {
 }
 .myButton:hover{
         text-shadow: 0px 0px 1px #fadb6f;
-		background:#000;
+	background: #252E39;
 }
 .company_address{
 	 float:left;
@@ -1070,7 +1070,7 @@ p.text {
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)"; /*IE8*/
 }
 .gallery-content-head h3{
-	color: #000000;
+	color: #252E39;
 	text-transform: uppercase;
 	font-size: 2.2em;
 	font-weight: 500;
@@ -1082,7 +1082,7 @@ p.text {
 	margin:7em 0 5em;
 }
 .about-top-info h3 {
-	  color: #000000;
+	color: #252E39;
   text-transform: uppercase;
   font-size: 2.2em;
   font-weight: 500;
@@ -1090,7 +1090,7 @@ p.text {
   text-align: center;
 }
 .about-topgrid1 h3 {
-	  color: #000000;
+	color: #252E39;
   text-transform: uppercase;
   font-size: 2.2em;
   font-weight: 500;
@@ -1165,7 +1165,7 @@ p.text {
 	min-height: 670px;
 }
 .error h1{
-	color: #000;
+	color: #252E39;
 	font-size: 9em;
 	line-height: 1em;
 	margin-top: 0.8em;
@@ -1173,7 +1173,7 @@ p.text {
 }
 .error-head h2{
 	font-size: 1.5em;
-	color: #444;
+	color: #252E39;
 	margin-top:1.5em;
 	font-weight:500;
 }
@@ -1238,7 +1238,7 @@ a.hvr-bounce-to-left:hover,a.hvr-bounce-to-left:focus,a.hvr-bounce-to-left:activ
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 .footer1 {
-  background: #444444;
+	background: #252E39;
   padding: 3em 0;
 }
 

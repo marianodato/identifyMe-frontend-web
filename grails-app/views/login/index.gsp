@@ -32,7 +32,7 @@ p {
 
 h1 {
     font-size: 1.5em;
-    color: #525252;
+    color: #252E39;
     padding-top: 20px;
 }
 
