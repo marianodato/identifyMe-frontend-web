@@ -273,7 +273,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 </g:else>
 
-<g:if test="${registrationRecords.size() <= 4}">
+<g:if test="${registrationRecords.size() <= 3}">
     <!-- footer-section-starts -->
     <div class="fixed-footer" style="background-color: #182128;">
         <div class="container">
