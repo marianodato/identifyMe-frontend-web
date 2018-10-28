@@ -13,7 +13,7 @@ class LoginController {
 
         if (user) {
             log.info("User_id: " + user.id)
-            redirect(controller: "home", action: "index")
+            redirect(controller: "record", action: "index")
             return
         }
 
@@ -28,7 +28,7 @@ class LoginController {
 
         if (user) {
             log.info("User_id: " + user.id)
-            redirect(controller: "home", action: "index")
+            redirect(controller: "record", action: "index")
             return
         }
 
@@ -40,7 +40,7 @@ class LoginController {
             //Default session time: 30 minutes
             session.token = resp.sessionToken
             session.userId = resp.userId
-            redirect(controller: "home", action: "index")
+            redirect(controller: "record", action: "index")
             return
         }
 

@@ -1,13 +1,14 @@
 package webserver
 
-class HomeController {
+class RecordController {
 
     def sessionService
-    def recordsService
+    def recordService
+    def userService
 
     def index() {
 
-        log.info("Starting index - HomeController")
+        log.info("Starting index - RecordController")
 
         def user = sessionService.getUser(session.token, session.userId)
         def model = [:]
@@ -25,7 +26,33 @@ class HomeController {
             params.page = params.page as Integer
         }
 
-        def resp = recordsService.getUserRecords(session.token, session.userId, params.page - 1)
+        model.username = user.username
+        model.isAdmin = user.isAdmin
+
+        def userIdToSearch = null
+
+        if (user.isAdmin) {
+            def resp = userService.getUsers(session.token)
+
+            if (!resp) {
+                throw new RuntimeException("Error obtaining user list!")
+            }
+
+            model.users = resp.results
+
+            if (params.userId != null) {
+                model.selected = params.userId as Integer
+                if ((params.userId as Integer) != 0) {
+                    userIdToSearch = params.userId as Integer
+                }
+            } else {
+                model.selected = 0
+            }
+        } else {
+            userIdToSearch = session.userId
+        }
+
+        def resp = recordService.getUserRecords(session.token, userIdToSearch, params.page - 1)
 
         if (!resp) {
             throw new RuntimeException("Error obtaining user record registers!")
@@ -42,8 +69,6 @@ class HomeController {
         log.info("Page: " + model.page)
         log.info("Pages: " + model.pages)
 
-        model.username = user.username
-
-        render(view: "/home/index", model: model)
+        render(view: "/record/index", model: model)
     }
 }

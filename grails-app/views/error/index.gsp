@@ -52,7 +52,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="container">
                 <div class="logo">
                     <g:if test="${logged == true}">
-                        <a href="${createLink(controller: 'home', action: 'index')}"><img
+                        <a href="${createLink(controller: 'record', action: 'index')}"><img
                                 src="${resource(dir: 'images', file: 'logo4.png')}" alt=""/></a>
                     </g:if>
                     <g:else>
@@ -65,7 +65,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul>
                         <nav class="cl-effect-5">
                             <g:if test="${logged == true}">
-                                <li><a href="${createLink(controller: 'home', action: 'index')}">Mis fichadas</a></li>
+                                <li><a href="${createLink(controller: 'record', action: 'index')}">Mis fichadas</a></li>
                                 <li><a href="${createLink(controller: 'profile', action: 'index')}">Mi perfil</a></li>
                                 <li>
                                     <a>
@@ -96,7 +96,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <h2>Disculpa, ocurrió un error en el servidor!</h2>
                     <g:if test="${logged == true}">
                         <a class="hvr-bounce-to-left button"
-                           href="${createLink(controller: 'home', action: 'index')}">Volver</a>
+                           href="${createLink(controller: 'record', action: 'index')}">Volver</a>
                     </g:if>
                     <g:else>
                         <a class="hvr-bounce-to-left button"

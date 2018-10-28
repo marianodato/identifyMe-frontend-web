@@ -43,7 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="header-bottom">
         <div class="container">
             <div class="logo">
-                <a href="${createLink(controller: 'home', action: 'index')}"><img
+                <a href="${createLink(controller: 'record', action: 'index')}"><img
                         src="${resource(dir: 'images', file: 'logo4.png')}" alt=""/></a>
             </div>
             <span class="menu"></span>
@@ -51,7 +51,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="top-menu">
                 <ul>
                     <nav class="cl-effect-5">
-                        <li><a href="${createLink(controller: 'home', action: 'index')}">Mis fichadas</a>
+                        <li><a href="${createLink(controller: 'record', action: 'index')}">Mis fichadas</a>
                         </li>
                         <li><a class="active" href="${createLink(controller: 'profile', action: 'index')}">Mi perfil</a>
                         </li>

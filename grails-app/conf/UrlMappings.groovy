@@ -12,8 +12,8 @@ class UrlMappings {
             action = [GET:"index", POST: "login"]
         }
 
-        "/home"{
-            controller = "home"
+        "/records"{
+            controller = "record"
             action = [GET: "index"]
         }
 
