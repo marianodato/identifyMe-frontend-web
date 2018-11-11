@@ -194,22 +194,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <table id="table"><tr><th style="width: 25%;">Usuario</th> <th
                                                 style="width: 25%;">Entradas</th> <th
                                                 style="width: 25%;">Salidas</th> <th
-                                                style="width: 25%;">Segundos en sistema</th>
+                                                style="width: 25%;">Tiempo en sistema</th>
                                         </tr>
                                             <g:each in="${registrationRecords}">
                                                 <tr><td style="width: 25%;">${it.userUsername}</td> <td
                                                         style="width: 25%;">${it.entryTime}</td> <td
                                                         style="width: 25%;">${it.departureTime ? it.departureTime : "No hay registro"}</td> <td
-                                                        style="width: 25%;">${it.secondsInSystem ? it.secondsInSystem : "No hay registro"}</td>
+                                                        style="width: 25%;">${it.timeInSystem ? it.timeInSystem : "No hay registro"}</td>
                                                 </tr>
                                             </g:each>
                                         </table>
                                     </g:if>
                                     <g:else>
-                                        <table id="table"><tr><th>Entradas</th> <th>Salidas</th> <th>Segundos en sistema</th>
+                                        <table id="table"><tr><th>Entradas</th> <th>Salidas</th> <th>Tiempo en sistema</th>
                                         </tr>
                                             <g:each in="${registrationRecords}">
-                                                <tr><td>${it.entryTime}</td> <td>${it.departureTime ? it.departureTime : "No hay registro"}</td> <td>${it.secondsInSystem ? it.secondsInSystem : "No hay registro"}</td>
+                                                <tr><td>${it.entryTime}</td> <td>${it.departureTime ? it.departureTime : "No hay registro"}</td> <td>${it.timeInSystem ? it.timeInSystem : "No hay registro"}</td>
                                                 </tr>
                                             </g:each>
                                         </table>
